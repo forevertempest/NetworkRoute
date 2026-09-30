@@ -84,7 +84,7 @@ internal/
 
 | Document | Description |
 |---|---|
-| [ARCHITECTURE.md](ARCHITECTURE.md) | Design, decisions, roadmap |
+| [ARCHITECTURE.md]([ARCHITECTURE.md](docs/ARCHITECTURE.md)) | Design, decisions, roadmap |
 | [SECURITY.md](SECURITY.md) | Security policy and threat model |
 | [docs/QUICKSTART.md](docs/QUICKSTART.md) | Step-by-step setup guide |
 | [docs/CONSOLE.md](docs/CONSOLE.md) | Interactive menu reference |
