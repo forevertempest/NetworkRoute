@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "listen": "127.0.0.1:1080",
+  "mode": "smart",
+  "profile": "AUTO",
+  "fail_mode": "open",
+  "bypass_domains": ["localhost", "local"],
+  "bypass_cidrs": [],
+  "max_connections": 128,
+  "direct_race_delay_ms": 250,
+  "allow_nested_tunnel": false
+}
