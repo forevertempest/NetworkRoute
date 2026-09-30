@@ -1,0 +1,26 @@
+[Unit]
+Description=NetworkRoute authenticated QUIC relay
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=networkroute
+Group=networkroute
+WorkingDirectory=/var/lib/networkroute
+ExecStart=/opt/networkroute/nr-relay --listen :7443 --cert /var/lib/networkroute/identity/identity.pem --key /var/lib/networkroute/identity/identity.key --clients REPLACE_WITH_CLIENT_PUBLIC_PIN
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+CapabilityBoundingSet=
+UMask=0077
+LimitNOFILE=16384
+MemoryMax=512M
+TasksMax=256
+
+[Install]
+WantedBy=multi-user.target
